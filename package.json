@@ -18,7 +18,8 @@
     "test:access": "vitest run tests/access",
     "test:access:redgreen": "node scripts/access-matrix.mjs",
     "test:auth": "vitest run tests/auth",
-    "test:payments": "vitest run tests/payments"
+    "test:payments": "vitest run tests/payments",
+    "test:collaboration": "vitest run tests/collaboration"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.6",
