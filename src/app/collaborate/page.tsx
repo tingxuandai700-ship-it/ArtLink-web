@@ -1,4 +1,4 @@
-﻿import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 export const metadata = {
   title: "Open to collaborate — Lightsquare",
