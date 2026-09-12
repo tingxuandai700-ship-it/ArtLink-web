@@ -139,9 +139,12 @@ export async function startApp(): Promise<{ close: () => Promise<void> }> {
   // The local binary (no npx wrapper) in its own process group, so
   // cleanup kills the whole tree — a surviving server from a previous
   // run would serve a STALE build to these tests.
+  // Launch Next through Node directly so the harness works on Windows
+  // as well as Linux/macOS without relying on a .bin shell shim.
+  const nextCli = path.join(root, "node_modules", "next", "dist", "bin", "next");
   const child = spawn(
-    path.join(root, "node_modules", ".bin", "next"),
-    ["start", "-p", String(PORT), "-H", "127.0.0.1"],
+    process.execPath,
+    [nextCli, "start", "-p", String(PORT), "-H", "127.0.0.1"],
     {
       cwd: root,
       stdio: "ignore",
