@@ -66,6 +66,12 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
+  // A signed-in incomplete user must be allowed to open onboarding itself.
+  // Otherwise /onboarding redirects back to /onboarding forever.
+  if (path === "/onboarding") {
+    return response;
+  }
+
   // Incomplete onboarding: handle_new_user created the profile row at
   // signup, but category/handle choice happens in /onboarding. category_id
   // is the completion marker — NULL means the user must not reach the
