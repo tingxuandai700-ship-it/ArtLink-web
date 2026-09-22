@@ -2,11 +2,12 @@
 
 ## Status
 - Owner: Tingxuan Dai
-- Project: Lightsquare
+- Project: Happenfolk (formerly Lightsquare)
 - Group: C262T-4103
 - Week 7 deliverable: C6 SRS section
-- Implemented now: Open to Collaborate profile setting, `/collaborate` browse, workflow test
-- Planned later: event collaborators, event registration, payment MVP
+- Implemented at the time: Open to Collaborate profile setting, `/collaborate` browse, workflow test
+- Planned at the time: event collaborators, event registration, payment MVP
+- Scope update: After the Week 7 work was completed, the team changed the Open to Collaborate requirement from the profile level to the event level. The profile-level content below is kept as evidence of the Week 7 implementation and will need to be updated in the current SRS.
 
 ## 1. Purpose
 The Collaboration Layer lets artists indicate that they are open to collaboration and lets visitors discover those artists. The current slice does not include messaging, applications, briefs, or team matching.
